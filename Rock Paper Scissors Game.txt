@@ -1,0 +1,84 @@
+# Rock Paper Scissors Game in Python
+
+import random
+lst = ['r','p','s']
+
+Total_match = 10
+Match_played = 0
+Cpu_point = 0
+Your_point = 0
+
+print(" \t \t \t  Rock,Paper,Scissors Game \n")
+print("r for Rock \np for Paper \ns for Scissors \n")
+
+
+while Match_played < Total_match:
+    _input = input('Rock,Paper,Scissors:')
+    _random = random.choice(lst)
+
+    if _input == _random:
+        print(f"your guess {_input} and cpu guess is {_random} \n")
+        print("Tie Both 0 point to each \n ")
+
+    
+    elif _input == "r" and _random == "p":
+        Cpu_point = Cpu_point + 1
+        print(f"your guess {_input} and cpu guess is {_random} \n")
+        print("Cpu wins 1 point \n")
+        print(f"Cpu_point is {Cpu_point} and Your point is {Your_point} \n ")
+
+    elif _input == "p" and _random == "s":
+        Your_point_point = Your_point + 1
+        print(f"your guess {_input} and cpu guess is {_random} \n")
+        print("You wins 1 point \n")
+        print(f"Cpu_point is {Cpu_point} and Your point is {Your_point} \n")
+
+    
+    elif _input == "s" and _random == "r":
+        Cpu_point = Cpu_point + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print("Cpu wins 1 point \n")
+        print(f"Cpu_point is {Cpu_point} and Your point is {Your_point} \n ")
+
+    elif _input == "r" and _random == "s":
+        Your_point = Your_point + 1
+        print(f"Your guess {_input} and Cpu guess is {_random} \n")
+        print("You wins 1 point \n")
+        print(f"Cpu_point is {Cpu_point} and Your point is {Your_point} \n")
+
+    
+
+    elif _input == "s" and _random == "p":
+        Your_point = Your_point + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print("You wins 1 point \n")
+        print(f"Cpu_point is {Cpu_point} and Your point is {Your_point} \n")
+
+
+    elif _input == "p" and _random == "s":
+        Cpu_point = Cpu_point + 1
+        print(f"your guess {_input} and computer guess is {_random} \n")
+        print("Cpu wins 1 point \n")
+        print(f"Cpu_point is {Cpu_point} and Your point is {Your_point} \n ")
+
+    else:
+        print("you have input wrong \n")
+
+    Match_played = Match_played + 1
+    print(f"{Total_match - Match_played} is left out of {Total_match} \n")
+
+print("Game over")
+
+if Cpu_point==Your_point:
+    print("Tie")
+
+elif Cpu_point > Your_point:
+    print("Cpu wins and You loose")
+
+else:
+    print("You win and Cpu loose")
+
+print(f"your point is {Your_point} and computer point is {Cpu_point}")
+
+
+
